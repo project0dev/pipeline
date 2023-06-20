@@ -14,3 +14,5 @@ runs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ inputs.node-version }}
+    - name: 🛠 Install Dependencies
+      run: yarn install --frozen-lockfile
