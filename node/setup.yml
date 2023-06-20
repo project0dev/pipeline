@@ -1,0 +1,18 @@
+name: '🚀 Setup'
+description: 'Checkout Code and Setup Node'
+inputs:
+  node-version:
+    description: 'Version of node'
+    required: true
+    default: '16'
+runs:
+  using: 'composite'
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ inputs.node-version }}
+    - name: 🛠 Install Dependencies
+      run: yarn install --frozen-lockfile
