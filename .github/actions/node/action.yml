@@ -16,3 +16,4 @@ runs:
         node-version: ${{ inputs.node-version }}
     - name: 🛠 Install Dependencies
       run: yarn install --frozen-lockfile
+      shell: bash
